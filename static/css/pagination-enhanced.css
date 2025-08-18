@@ -1,0 +1,244 @@
+/* 增强分页样式 */
+.pagination-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.page-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-pagination li {
+    display: inline-block;
+}
+
+.page-pagination li a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 2px;
+    color: #666;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    min-width: 40px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.page-pagination li a:hover {
+    background-color: #f8f9fa;
+    border-color: #007bff;
+    color: #007bff;
+    transform: translateY(-1px);
+}
+
+.page-pagination li.active a {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    font-weight: 600;
+}
+
+.page-pagination li.active a:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: none;
+}
+
+/* 省略号样式 */
+.page-pagination li.pagination-ellipsis {
+    padding: 8px 4px;
+    color: #999;
+    font-weight: bold;
+}
+
+.page-pagination li.pagination-ellipsis span {
+    display: inline-block;
+    padding: 0 8px;
+}
+
+/* 页面跳转样式 */
+.page-pagination li.page-jump {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 15px;
+    padding: 4px 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.page-pagination li.page-jump span {
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.page-pagination li.page-jump input {
+    width: 50px;
+    padding: 4px 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.page-pagination li.page-jump input:focus {
+    outline: none;
+    border-color: #dc5c01;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.page-pagination li.page-jump button {
+    padding: 4px 8px;
+    background-color: #495057;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.page-pagination li.page-jump button:hover:not(.disabled) {
+    background-color: #0056b3;
+}
+
+.page-pagination li.page-jump button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* 分页信息样式 */
+.pagination-info {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#pagination-info-text {
+    padding: 8px 16px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    border: 1px solid #e9ecef;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .pagination-wrapper {
+        gap: 10px;
+    }
+
+    .page-pagination {
+        gap: 3px;
+    }
+
+    .page-pagination li a {
+        padding: 6px 8px;
+        margin: 0 1px;
+        min-width: 32px;
+        font-size: 14px;
+    }
+
+    .page-pagination li.page-jump {
+        margin-left: 8px;
+        padding: 3px 8px;
+    }
+
+    .page-pagination li.page-jump input {
+        width: 40px;
+        padding: 3px 4px;
+        font-size: 12px;
+    }
+
+    .page-pagination li.page-jump button {
+        padding: 3px 6px;
+        font-size: 11px;
+    }
+
+    .page-pagination li.page-jump span {
+        font-size: 12px;
+    }
+
+    .pagination-info {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .page-pagination li.page-jump {
+        margin-left: 0;
+        margin-top: 8px;
+        order: 10;
+    }
+}
+
+/* 加载动画 */
+.pagination-loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 首页和末页按钮特殊样式 */
+.page-pagination li a[title="First Page"],
+.page-pagination li a[title="Last Page"] {
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+
+.page-pagination li a[title="First Page"]:hover,
+.page-pagination li a[title="Last Page"]:hover {
+    background-color: #e9ecef;
+}
+
+/* 无文章状态样式增强 */
+.no-blogs-message {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.no-blogs-icon {
+    font-size: 48px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.no-blogs-message h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.no-blogs-message p {
+    margin: 0;
+    font-size: 16px;
+}
