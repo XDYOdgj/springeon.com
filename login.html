@@ -1,0 +1,319 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Login / Register</title>
+		<meta name="robots" content="noindex, nofollow">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/css/iconfont.min.css">
+		<link rel="stylesheet" href="static/css/helper.css">
+		<link rel="stylesheet" href="static/css/plugins.css">
+		<link rel="stylesheet" href="static/css/style.css">
+		<!-- Modernizr JS -->
+		<script src="static/js/modernizr-2.8.3.min.js"></script>
+		<link rel="shortcut icon" href="favicon.ico" />
+
+		<link rel="stylesheet" href="static/css/common.css">
+		<link rel="stylesheet" href="static/css/jquery.toast.css">
+
+	</head>
+	<body>
+		<div id="main-wrapper"><!--Header section start-->
+			<header class="header header-transparent header-center header-sticky d-none d-lg-block">
+				<div class="header-bottom menu-right">
+					<div class="container-fluid pl-30 pr-30">
+						<div class="row align-items-center"><!--Logo start-->
+							<div class="col-xl-2 col-12 text-center mt-20 mb-20">
+								<div><a href="index"><img src="static/image/logo.png" class="logo" alt=""></a>
+								</div>
+							</div><!--Logo end--><!--Menu start-->
+							<div class="col-xl-4 col-12">
+								<nav class="main-menu">
+									<ul>
+										<li><a href="index">Home </a>
+										</li>
+										<li><a href="shop-list">Shop <span class="lnr lnr-chevron-down"></span></a>
+											<ul class="mega-menu four-column">
+
+											</ul>
+										</li>
+										<li><a href="blog">Blog</a></li>
+									<li><a href="contact">Contact</a></li>
+									</ul>
+								</nav>
+							</div><!--Menu end--><!-- Cart & Search Area Start -->
+							<div class="col-xl-6 col-12 d-flex justify-content-xl-end justify-content-center">
+								<div class="header-search-area">
+									<div class="header-search-form">
+										<form action="#"><button><span class="lnr lnr-magnifier"></span></button><input
+												type="text" placeholder="Search Product..." id="livesearch1"
+												onblur="fnSearch(1)"></form>
+									</div>
+								</div>
+								<nav class="main-menu  d-flex align-items-center">
+									<ul>
+										<li><a href="#" style="padding: 0  10px;">English <span
+													class="lnr lnr-chevron-down"></span></a>
+											<ul class="sub-menu">
+												<li><a>English</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+								<nav class="main-menu  d-flex align-items-center">
+									<ul>
+										<li><a href="#" style="padding: 0  10px;">USD <span
+													class="lnr lnr-chevron-down"></span></a>
+											<ul class="sub-menu">
+												<li><a>USD</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+								<div class="header-cart"><a href="cart"><span class="lnr lnr-cart"></span><span
+											class="count  cart-num"></span></a><!--Mini Cart Dropdown Start-->
+									<div class="header-cart-dropdown">
+										<ul class="cart-items " id="right_product_list">
+
+
+
+										</ul>
+										<div class="cart-total">
+											<h5>Total : $<span class="float-right  total-amount-goods">0.00</span></h5>
+										</div>
+										<div class="cart-btn"><a id="cart-view">View Cart</a>
+											<a id="checkout-view">checkout</a>
+										</div>
+									</div><!--Mini Cart Dropdown End-->
+								</div>
+								<ul class="ht-us-menu">
+									<li><a href="#"><span class="lnr lnr-menu-circle"></span></a>
+										<ul class="ht-dropdown right">
+											<li class="AccountEditAccount"><a href="./edit-account?id=1">Orders</a>
+											</li>
+											<li class="AccountEditAccount"><a href="./edit-account?id=2">Account
+													Details</a></li>
+											<li class="AccountEditAccount"><a
+													href="./edit-account?id=3">Address</a></li>
+											<li class="AccountLogin"><a href="./login">Login</a></li>
+											<li class="AccountLogOut" onclick="fnLogout()"> <a>Log Out</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div><!-- Cart & Search Area End -->
+						</div><!--Mobile Menu start-->
+						<div class="row">
+							<div class="col-12 d-flex d-lg-none">
+								<div class="mobile-menu"></div>
+							</div>
+						</div><!--Mobile Menu end-->
+					</div>
+				</div>
+			</header><!--Header section end--><!--Header Mobile section start-->
+			<header class="header-mobile d-block d-lg-none">
+				<div class="header-bottom menu-right">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="header-mobile-navigation d-block d-lg-none">
+									<div class="row align-items-center">
+										<div class="col-6 col-md-6">
+											<div class="header-logo"><a href="index"><img
+														src="static/image/logo.png" class="img-fluid  logo" alt=""></a>
+											</div>
+										</div>
+										<div class="col-6 col-md-6">
+											<div class="mobile-navigation text-right">
+												<div class="header-icon-wrapper">
+													<ul class="icon-list justify-content-end">
+														<li>
+															<div class="header-cart-icon"><a href="cart"><i
+																		class="lnr lnr-cart  "></i><span
+																		class="cart-num">0</span></a>
+															</div>
+														</li>
+														<li><a href="javascript:void(0)" class="mobile-menu-icon"
+																id="mobile-menu-trigger"><i
+																	class="lnr lnr-menu"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!--Mobile Menu start-->
+						<div class="row">
+							<div class="col-12 d-flex d-lg-none">
+								<div class="mobile-menu"></div>
+							</div>
+						</div><!--Mobile Menu end-->
+					</div>
+				</div>
+			</header><!--Header Mobile section end--><!-- Offcanvas Menu Start -->
+			<div class="offcanvas-mobile-menu" id="offcanvas-mobile-menu"><a href="javascript:void(0)"
+					class="offcanvas-menu-close" id="offcanvas-menu-close-trigger"><i class="lnr lnr-cross"></i></a>
+				<div class="offcanvas-wrapper">
+					<div class="offcanvas-inner-content">
+						<div class="offcanvas-mobile-search-area">
+							<form action="#"><input type="search" id="livesearch2" onblur="fnSearch(2)"
+									placeholder="Search ..."><button type="submit"><i
+										class="lnr lnr-magnifier"></i></button></form>
+						</div>
+						<nav class="offcanvas-navigation">
+							<ul>
+								<li class="menu-item-has-children"><a href="#">Home</a>
+								</li>
+								<li class="menu-item-has-children"><a href="#">Shop</a>
+									<ul class="submenu2" id="mobile-shop-menu">
+
+									</ul>
+								</li>
+								<li class="menu-item-has-children  angle-shape-pages"><a href="#">Pages</a>
+									<ul class="submenu2">
+										<li class="AccountEditAccount"><a href="./edit-account?id=1">Orders</a>
+										</li>
+										<li class="AccountEditAccount"><a href="./edit-account?id=2">Account
+												Details</a></li>
+										<li class="AccountEditAccount"><a href="./edit-account?id=3">Address</a>
+										</li>
+										<li class="AccountLogin"><a href="./login">Login</a></li>
+										<li class="AccountLogOut" onclick="fnLogout()"> <a>Log Out</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children"><a href="blog">Blog</a></li>
+								<li class="menu-item-has-children"><a href="contact">Contact Us</a></li>
+							</ul>
+						</nav>
+						<div class="offcanvas-settings">
+							<nav class="offcanvas-navigation">
+								<ul>
+									<li class="menu-item-has-children"><a href="#">CURRENCY: USD</a>
+										<ul class="submenu2">
+											<li><a href="javascript:void(0)">EUR Euro</a></li>
+											<li><a href="javascript:void(0)">$ US Dollar</a></li>
+										</ul>
+									</li>
+									<li class="menu-item-has-children"><a href="#">LANGUAGE: EN-GB</a>
+										<ul class="submenu2">
+											<li><a href="javascript:void(0)"><img src="static/picture/en-gb.png"
+														alt="">English</a></li>
+											<li><a href="javascript:void(0)"><img src="static/picture/de-de.png"
+														alt="">Germany</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="offcanvas-widget-area">
+						</div>
+					</div>
+				</div>
+			</div><!-- Offcanvas Menu End --><!-- Page Banner Section Start -->
+			<div class="page-banner-section section bg_image--3">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="page-banner text-center">
+								<h2>Login / Register</h2>
+								<ul class="page-breadcrumb">
+									<li><a href="index">Home</a></li>
+									<li>Login / Register</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- Page Banner Section End --><!--Login Register section start-->
+			<div
+				class="login-register-section section sb-border pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-70 pb-lg-50 pb-md-40 pb-sm-30 pb-xs-20">
+				<div class="container">
+					<div class="row"><!--Login Form Start-->
+						<div class="col-md-6 col-sm-6">
+							<div class="customer-login-register">
+								<div class="form-login-title">
+									<h2>Login</h2>
+								</div>
+								<div class="login-form">
+									<form id="loginForm">
+										<div class="form-fild">
+											<p><label>Username or email address <span class="required">*</span></label>
+											</p><input name="nickname" value="" type="text" class="login-nickname">
+										</div>
+										<div class="form-fild">
+											<p><label>Password <span class="required">*</span></label></p><input
+												name="password" value="" type="password" class="login-password">
+										</div>
+										<div class="login-submit">
+											<button class="ht-btn black-btn" type="button"
+												onclick="fnLogin()">Login</button>
+
+										</div>
+										<div class="login-toggle-btn  d-flex justify-content-between">
+											<label>
+												<input name="rememberme" type="checkbox" id="rememberme" value="1">
+												<span>Remember me</span>
+											</label>
+											<a href="#">Lost your password?</a>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div><!--Login Form End--><!--Register Form Start-->
+						<div class="col-md-6 col-sm-6">
+							<div class="customer-login-register register-pt-0">
+								<div class="form-register-title">
+									<h2>Register</h2>
+								</div>
+								<div class="register-form">
+									<form id="registerForm">
+										<div class="form-fild">
+											<p><label>nickname <span class="required">*</span></label>
+											</p>
+											<input type="text" name="nickname" placeholder="Username">
+										</div>
+										<div class="form-fild">
+											<p><label>email <span class="required">*</span></label>
+											</p><input name="email" placeholder="Email" type="email">
+										</div>
+
+										<div class="form-fild">
+											<p><label>Password <span class="required">*</span></label></p><input
+												name="password" value="" type="password">
+										</div>
+
+										<div class="form-fild">
+											<p><label>Confirm password <span class="required">*</span></label></p><input
+												name="repassword" value="" type="password">
+										</div>
+
+										<div class="register-submit"><button type="button" onclick="fnRegister()"
+												class="ht-btn black-btn">Register</button></div>
+									</form>
+								</div>
+							</div>
+						</div><!--Register Form End-->
+					</div>
+				</div>
+			</div><!--Login Register section end--><!--Footer section start-->
+			<div id="foot">
+
+			</div>
+		</div>
+		<!-- Placed js at the end of the document so the pages load faster --><!-- All jquery file included here -->
+		<script src="static/js/jquery-1.12.4.min.js"></script>
+		<script src="static/js/popper.min.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
+		<script src="static/js/plugins.js"></script>
+		<script src="static/js/main.js"></script>
+
+		<script src="static/js/jquery.toast.js"></script>
+		<script src="static/ajaxJs/js/login.js" type="module"></script>
+		<script src="static/ajaxJs/js/head.js" type="module"></script>
+		<script src="static/ajaxJs/js/cart.js" type="module"></script>
+
+	</body>
+</html>

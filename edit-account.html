@@ -1,0 +1,600 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>My Account</title>
+		<meta name="robots" content="noindex, nofollow">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Place favicon.ico in the root directory --><!-- All css files are included here. -->
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/css/iconfont.min.css">
+		<link rel="stylesheet" href="static/css/helper.css">
+		<link rel="stylesheet" href="static/css/plugins.css">
+		<link rel="stylesheet" href="static/css/style.css"><!-- Modernizr JS -->
+		<script src="static/js/modernizr-2.8.3.min.js"></script>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="static/css/common.css">
+		<link rel="stylesheet" href="static/css/jquery.toast.css">
+	</head>
+	<body>
+		<div id="main-wrapper"><!--Header section start-->
+			<header class="header header-transparent header-center header-sticky d-none d-lg-block">
+				<div class="header-bottom menu-right">
+					<div class="container-fluid pl-30 pr-30">
+						<div class="row align-items-center"><!--Logo start-->
+							<div class="col-xl-2 col-12 text-center mt-20 mb-20">
+								<div><a href="index"><img src="static/image/logo.png" class="logo" alt=""></a>
+								</div>
+							</div><!--Logo end--><!--Menu start-->
+							<div class="col-xl-4 col-12">
+								<nav class="main-menu">
+									<ul>
+										<li><a href="index">Home </a>
+										</li>
+										<li><a href="shop-list">Shop <span class="lnr lnr-chevron-down"></span></a>
+											<ul class="mega-menu four-column">
+
+											</ul>
+										</li>
+										<li><a href="blog">Blog</a></li>
+									<li><a href="contact">Contact</a></li>
+									</ul>
+								</nav>
+							</div><!--Menu end--><!-- Cart & Search Area Start -->
+							<div class="col-xl-6 col-12 d-flex justify-content-xl-end justify-content-center">
+								<div class="header-search-area">
+									<div class="header-search-form">
+										<form action="#"><button><span class="lnr lnr-magnifier"></span></button><input
+												type="text" placeholder="Search Product..." id="livesearch1"
+												onblur="fnSearch(1)"></form>
+									</div>
+								</div>
+								<nav class="main-menu  d-flex align-items-center">
+									<ul>
+										<li><a href="#" style="padding: 0  10px;">English <span
+													class="lnr lnr-chevron-down"></span></a>
+											<ul class="sub-menu">
+												<li><a>English</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+								<nav class="main-menu  d-flex align-items-center">
+									<ul>
+										<li><a href="#" style="padding: 0  10px;">USD <span
+													class="lnr lnr-chevron-down"></span></a>
+											<ul class="sub-menu">
+												<li><a>USD</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+								<div class="header-cart"><a href="cart"><span class="lnr lnr-cart"></span><span
+											class="count  cart-num"></span></a><!--Mini Cart Dropdown Start-->
+									<div class="header-cart-dropdown">
+										<ul class="cart-items " id="right_product_list">
+
+
+
+										</ul>
+										<div class="cart-total">
+											<h5>Total : $<span class="float-right  total-amount-goods">0.00</span></h5>
+										</div>
+										<div class="cart-btn"><a id="cart-view">View Cart</a>
+											<a id="checkout-view">checkout</a>
+										</div>
+									</div><!--Mini Cart Dropdown End-->
+								</div>
+								<ul class="ht-us-menu">
+									<li><a href="#"><span class="lnr lnr-menu-circle"></span></a>
+										<ul class="ht-dropdown right">
+											<li class="AccountEditAccount"><a href="./edit-account?id=1">Orders</a>
+											</li>
+											<li class="AccountEditAccount"><a href="./edit-account?id=2">Account
+													Details</a></li>
+											<li class="AccountEditAccount"><a
+													href="./edit-account?id=3">Address</a></li>
+											<li class="AccountLogin"><a href="./login">Login</a></li>
+											<li class="AccountLogOut" onclick="fnLogout()"> <a>Log Out</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div><!-- Cart & Search Area End -->
+						</div><!--Mobile Menu start-->
+						<div class="row">
+							<div class="col-12 d-flex d-lg-none">
+								<div class="mobile-menu"></div>
+							</div>
+						</div><!--Mobile Menu end-->
+					</div>
+				</div>
+			</header><!--Header section end--><!--Header Mobile section start-->
+			<header class="header-mobile d-block d-lg-none">
+				<div class="header-bottom menu-right">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="header-mobile-navigation d-block d-lg-none">
+									<div class="row align-items-center">
+										<div class="col-6 col-md-6">
+											<div class="header-logo"><a href="index"><img
+														src="static/image/logo.png" class="img-fluid  logo" alt=""></a>
+											</div>
+										</div>
+										<div class="col-6 col-md-6">
+											<div class="mobile-navigation text-right">
+												<div class="header-icon-wrapper">
+													<ul class="icon-list justify-content-end">
+														<li>
+															<div class="header-cart-icon"><a href="cart"><i
+																		class="lnr lnr-cart  "></i><span
+																		class="cart-num">0</span></a>
+															</div>
+														</li>
+														<li><a href="javascript:void(0)" class="mobile-menu-icon"
+																id="mobile-menu-trigger"><i
+																	class="lnr lnr-menu"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!--Mobile Menu start-->
+						<div class="row">
+							<div class="col-12 d-flex d-lg-none">
+								<div class="mobile-menu"></div>
+							</div>
+						</div><!--Mobile Menu end-->
+					</div>
+				</div>
+			</header><!--Header Mobile section end--><!-- Offcanvas Menu Start -->
+			<div class="offcanvas-mobile-menu" id="offcanvas-mobile-menu"><a href="javascript:void(0)"
+					class="offcanvas-menu-close" id="offcanvas-menu-close-trigger"><i class="lnr lnr-cross"></i></a>
+				<div class="offcanvas-wrapper">
+					<div class="offcanvas-inner-content">
+						<div class="offcanvas-mobile-search-area">
+							<form action="#"><input type="search" id="livesearch2" onblur="fnSearch(2)"
+									placeholder="Search ..."><button type="submit"><i
+										class="lnr lnr-magnifier"></i></button></form>
+						</div>
+						<nav class="offcanvas-navigation">
+							<ul>
+								<li class="menu-item-has-children"><a href="#">Home</a>
+								</li>
+								<li class="menu-item-has-children"><a href="#">Shop</a>
+									<ul class="submenu2" id="mobile-shop-menu">
+
+									</ul>
+								</li>
+								<li class="menu-item-has-children  angle-shape-pages"><a href="#">Pages</a>
+									<ul class="submenu2">
+										<li class="AccountEditAccount"><a href="./edit-account?id=1">Orders</a>
+										</li>
+										<li class="AccountEditAccount"><a href="./edit-account?id=2">Account
+												Details</a></li>
+										<li class="AccountEditAccount"><a href="./edit-account?id=3">Address</a>
+										</li>
+										<li class="AccountLogin"><a href="./login">Login</a></li>
+										<li class="AccountLogOut" onclick="fnLogout()"> <a>Log Out</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children"><a href="blog">Blog</a></li>
+								<li class="menu-item-has-children"><a href="contact">Contact Us</a></li>
+							</ul>
+						</nav>
+						<div class="offcanvas-settings">
+							<nav class="offcanvas-navigation">
+								<ul>
+									<li class="menu-item-has-children"><a href="#">CURRENCY: USD</a>
+										<ul class="submenu2">
+											<li><a href="javascript:void(0)">EUR Euro</a></li>
+											<li><a href="javascript:void(0)">$ US Dollar</a></li>
+										</ul>
+									</li>
+									<li class="menu-item-has-children"><a href="#">LANGUAGE: EN-GB</a>
+										<ul class="submenu2">
+											<li><a href="javascript:void(0)"><img src="static/picture/en-gb.png"
+														alt="">English</a></li>
+											<li><a href="javascript:void(0)"><img src="static/picture/de-de.png"
+														alt="">Germany</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="offcanvas-widget-area">
+						</div>
+					</div>
+				</div>
+			</div><!-- Offcanvas Menu End --><!-- Page Banner Section Start -->
+			<div class="page-banner-section section bg_image--3">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="page-banner text-center">
+								<h2>My Account</h2>
+								<ul class="page-breadcrumb">
+									<li><a href="index">Home</a></li>
+									<li>My Account</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- Page Banner Section End --><!--My Account section start-->
+			<div
+				class="my-account-section section sb-border pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-100 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="row"><!-- My Account Tab Menu Start -->
+								<div class="col-lg-2 col-12">
+									<div class="myaccount-tab-menu nav" role="tablist">
+										<a href="#dashboad" class="default-0 active" data-toggle="tab"> <i
+												class="fa fa-dashboard"></i> Dashboard</a>
+										<a href="#orders" class="default-1" data-toggle="tab"><i
+												class="fa fa-cart-arrow-down"></i>Orders</a>
+										<a href="#address-edit" class="default-2" data-toggle="tab"><i
+												class="fa fa-map-marker"></i>Address</a>
+										<a href="#account-info" class="default-3" data-toggle="tab"><i
+												class="fa fa-user"></i>Account
+											Details</a>
+										<a onclick="fnLogout()"><i class="fa fa-sign-out"></i>Logout</a>
+									</div>
+								</div><!-- My Account Tab Menu End --><!-- My Account Tab Content Start -->
+								<div class="col-lg-10 col-12">
+									<div class="tab-content" id="myaccountContent"><!-- Single Tab Content Start -->
+										<div class="tab-pane fade-0 show active" id="dashboad" role="tabpanel">
+											<div class="myaccount-content">
+												<h3>Dashboard</h3>
+												<div class="welcome mb-20">
+													<p>Hello, <strong class="userName"></strong>(If Not <strong class="userName">
+													</strong><a href="login" class="logout">Logout</a>)</p>
+												</div>
+												<p class="mb-0">From your account dashboard. you can easily check &amp;
+													view your recent orders, manage your shipping and billing addresses
+													and edit your password and account details.</p>
+											</div>
+										</div><!-- Single Tab Content End --><!-- Single Tab Content Start -->
+										<div class="tab-pane fade-1 fade" id="orders" role="tabpanel">
+											<div class="myaccount-content">
+												<h3>Orders</h3>
+												<div class="myaccount-table table-responsive text-center">
+													<table class="table table-bordered">
+														<thead class="thead-light">
+															<tr>
+																<th>No</th>
+																<th>Date</th>
+																<th>Status</th>
+																<th>Total</th>
+																<!-- <th>Action</th> -->
+															</tr>
+														</thead>
+														<tbody id="tbody">
+															<!-- <tr>
+																<td>1</td>
+																<td>Mostarizing Oil</td>
+																<td>Aug 22, 2018</td>
+																<td>Pending</td>
+																<td>$45</td>
+																<td><a href="cart"
+																		class="ht-btn black-btn">View</a></td>
+															</tr> -->
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade-2 fade" id="address-edit" role="tabpanel">
+											<div class="myaccount-content">
+
+
+												<div class="account-details-form">
+													<h3>Billing Details</h3>
+													<form id="bill-form">
+														<div class="row">
+															<div class="col-lg-12">
+																<div class="billing-info mb-20">
+																	<label>First Name <abbr class="required"
+																			title="required">*</abbr></label>
+																	<input type="text" name="bill_firstname"
+																		id="bill_firstname"
+																		placeholder="Enter First Name">
+																</div>
+															</div>
+
+															<div class="col-lg-12">
+																<div class="billing-info mb-20">
+																	<label>Last Name <abbr class="required"
+																			title="required">*</abbr></label>
+																	<input type="text" name="bill_lastname"
+																		placeholder="Enter Last Name"
+																		id="bill_lastname">
+																</div>
+															</div>
+
+															<div class="col-lg-12">
+																<div class="billing-info mb-20">
+																	<label>Country <abbr class="required"
+																			title="required">*</abbr></label>
+																	<input type="text" name="bill_country"
+																		placeholder="Search and find country"
+																		id="bill_country"
+																		onclick="showOption('bill_country')"
+																		oninput="selectSearch(this.value,'country','bill')"
+																		autocomplete="off">
+
+																	<div class="bill_country_iop-list select-hidden">
+
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-lg-12">
+																<div class="billing-info mb-20">
+																	<label>State / County <abbr class="required"
+																			title="required">*</abbr></label>
+																	<input type="text" name="bill_state"
+																		placeholder="Search and find state"
+																		id="bill_state"
+																		oninput="selectSearch(this.value,'state','bill')"
+																		autocomplete="off">
+
+																	<div class="bill_state_iop-list select-hidden">
+
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-12">
+																<div class="billing-info mb-20">
+																	<label>Town / City <abbr class="required"
+																			title="required">*</abbr></label>
+																	<input type="text" name="bill_city"
+																		placeholder="Search and find city"
+																		id="bill_city"
+																		oninput="selectSearch(this.value,'city','bill')"
+																		autocomplete="off">
+																	<div class="bill_city_iop-list select-hidden">
+
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-lg-12">
+																<div class="billing-info mb-20">
+																	<label>Street Address <abbr class="required"
+																			title="required">*</abbr></label>
+																	<input type="text" name="bill_street"
+																		id="bill_street"
+																		placeholder="House number and street name"
+																		value="" autocomplete="address-line1"
+																		data-placeholder="House number and street name">
+																</div>
+															</div>
+
+															<div class="col-lg-12 col-md-12">
+																<div class="billing-info mb-20">
+																	<label>Postcode / ZIP <abbr class="required"
+																			title="required">*</abbr></label>
+																	<input type="text" name="bill_zip" id="bill_zip"
+																		placeholder="House number and street name"
+																		value=""
+																		data-placeholder="House number and street name">
+																</div>
+															</div>
+															<div class="col-lg-12 col-md-12">
+																<div class="billing-info mb-20">
+																	<label>Phone <abbr class="required"
+																			title="required">*</abbr></label>
+																	<input type="tel" name="bill_phone" id="bill_phone"
+																		placeholder="Phone" value="" autocomplete="tel">
+																</div>
+															</div>
+															<div class="col-lg-12 col-md-12">
+																<div class="billing-info mb-20">
+																	<label>Email Address <abbr class="required"
+																			title="required">*</abbr></label>
+																	<input type="email" class="input-text "
+																		name="bill_email" id="bill_email" placeholder=""
+																		value="" autocomplete="email username">
+																</div>
+															</div>
+														</div>
+													</form>
+													<h3>Shipping address</h3>
+													<form id="ship-form">
+														<div class="different-address open-toggle mt-30">
+															<div class="row">
+																<div class="col-lg-12">
+																	<div class="billing-info mb-20">
+																		<label>First Name</label>
+																		<input type="text" class="input-text "
+																			name="ship_firstname" id="ship_firstname"
+																			placeholder="" value=""
+																			autocomplete="given-name">
+																	</div>
+																</div>
+																<div class="col-lg-12">
+																	<div class="billing-info mb-20">
+																		<label>Last Name</label>
+																		<input type="text" class="input-text "
+																			name="ship_lastname" id="ship_lastname">
+																	</div>
+																</div>
+																<div class="col-lg-12">
+																	<div class="billing-info mb-20">
+																		<label>Country</label>
+																		<input type="text" class="input-text "
+																			name="ship_country"
+																			placeholder="Search and find country"
+																			id="ship_country"
+																			onclick="showOption('ship_country')"
+																			oninput="selectSearch(this.value,'country','ship')"
+																			autocomplete="off">
+																		<div
+																			class="ship_country_iop-list select-hidden">
+
+																		</div>
+																	</div>
+																</div>
+																<div class="col-lg-12">
+																	<div class="billing-info mb-20">
+																		<label>State / County</label>
+																		<input type="text" class="input-text "
+																			name="ship_state"
+																			placeholder="Search and find state"
+																			id="ship_state"
+																			oninput="selectSearch(this.value,'state','ship')"
+																			autocomplete="off">
+
+																		<div class="ship_state_iop-list select-hidden">
+
+																		</div>
+																	</div>
+																</div>
+																<div class="col-lg-12">
+																	<div class="billing-info mb-20">
+																		<label>Town / City</label>
+																		<input type="text" class="input-text "
+																			name="ship_city"
+																			placeholder="Search and find city"
+																			id="ship_city"
+																			oninput="selectSearch(this.value,'city','ship')"
+																			autocomplete="off">
+
+																		<div class="ship_city_iop-list select-hidden">
+
+																		</div>
+																	</div>
+																</div>
+																<div class="col-lg-12">
+																	<div class="billing-info mb-20">
+																		<label>Street Address</label>
+																		<input type="text" class="input-text "
+																			name="ship_street" id="ship_street"
+																			placeholder="House number and street name"
+																			value="" autocomplete="address-line1"
+																			data-placeholder="House number and street name">
+																	</div>
+																</div>
+																<div class="col-lg-12">
+																	<div class="billing-info mb-20">
+																		<label>Postcode / ZIP</label>
+																		<input type="text" class="input-text "
+																			name="ship_zip" id="ship_zip" placeholder=""
+																			value="" autocomplete="postal-code">
+																	</div>
+																</div>
+																<div class="col-lg-12">
+																	<div class="billing-info mb-20">
+																		<label>Phone</label>
+																		<input type="tel" class="input-text "
+																			name="ship_phone" id="ship_phone"
+																			placeholder="" value="" autocomplete="tel">
+																	</div>
+																</div>
+																<div class="col-lg-12">
+																	<div class="billing-info mb-20">
+																		<label>Email Address</label>
+																		<input type="email" class="input-text "
+																			name="ship_email" id="ship_email"
+																			autocomplete="email username">
+																	</div>
+																</div>
+																<div class="col-lg-12">
+																	<input type="button" class="axil-btn"
+																		value="Save Changes"  onclick="saveAddress()">
+																</div>
+															</div>
+														</div>
+
+													</form>
+												</div>
+
+											</div>
+										</div><!-- Single Tab Content End --><!-- Single Tab Content Start -->
+										<div class="tab-pane  fade-3 fade" id="account-info" role="tabpanel">
+											<div class="myaccount-content">
+												<h3>Account Details</h3>
+												<div class="account-details-form">
+													<form>
+														<div class="row">
+															<div class="col-lg-12  mb-20">
+																<div class="single-input-item">
+																	<label for="display-name" class="required">Display
+																		Name</label>
+																	<input type="text" id="nickname">
+																</div>
+															</div>
+															<div class="col-lg-12  mb-20">
+																<div class="single-input-item">
+																	<label for="email" class="required">Email
+																		Addres</label>
+																	<input type="email" id="email">
+																</div>
+															</div>
+															<h3 style="padding: 20px 0;">Password change</h3>
+															<div class="col-lg-12  mb-20">
+																<div class="single-input-item">
+																	<label for="oldpassword" class="required">Current
+																		Password</label>
+																	<input type="password" id="oldpassword">
+																</div>
+															</div>
+
+															<div class="col-lg-12  mb-20">
+																<div class="single-input-item">
+																	<label for="newpassword" class="required">New
+																		Password</label>
+																	<input type="password" id="newpassword">
+																</div>
+															</div>
+															<div class="col-lg-12   mb-20">
+																<div class="single-input-item">
+																	<label for="oldpassword" class="required">Confirm
+																		Password</label>
+																	<input type="password" id="repassword">
+																</div>
+															</div>
+
+														</div>
+														<div class="col-12"><button class="save-change-btn"
+																type="button" onclick="saveChanges()">Save
+																Changes</button></div>
+													</form>
+												</div>
+											</div>
+										</div><!-- Single Tab Content End -->
+									</div>
+								</div><!-- My Account Tab Content End -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--My Account section end--><!--Footer section start-->
+			<div id="foot">
+
+			</div>
+		</div>
+		<!-- Placed js at the end of the document so the pages load faster --><!-- All jquery file included here -->
+		<script src="static/js/jquery-1.12.4.min.js"></script>
+		<script src="static/js/popper.min.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
+		<script src="static/js/plugins.js"></script>
+		<script src="static/js/main.js"></script>
+
+
+		<script src="static/js/jquery.toast.js"></script>
+		<script src="static/ajaxJs/js/head.js" type="module"></script>
+		<script src="static/ajaxJs/js/edit-account.js" type="module"></script>
+		<script src="static/ajaxJs/js/edit-address.js" type="module"></script>
+		<script src="static/ajaxJs/js/order.js" type="module"></script>
+		<script src="static/ajaxJs/js/cart.js" type="module"></script>
+
+
+	</body>
+</html>

@@ -1,0 +1,446 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Cozy Toddler Bed with Storage & Safety</title>
+		<meta name="description" content="A soft and safe toddler bed that blends style with practical storage, perfect for any nursery. Comfort meets convenience for your little one's room.">
+		<meta name="Keywords" content="toddler bed, safe toddler bedding, storage toddler bed, nursery furniture, baby bed">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Place favicon.ico in the root directory --><!-- All css files are included here. -->
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/css/iconfont.min.css">
+		<link rel="stylesheet" href="static/css/helper.css">
+		<link rel="stylesheet" href="static/css/plugins.css">
+		<link rel="stylesheet" href="static/css/style.css"><!-- Modernizr JS -->
+		<script src="static/js/modernizr-2.8.3.min.js"></script>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="static/css/common.css">
+		<link rel="stylesheet" href="static/css/jquery.toast.css">
+
+	</head>
+	<body>
+		<div id="main-wrapper"><!--Header section start-->
+			<header class="header header-transparent header-center header-sticky d-none d-lg-block">
+				<div class="header-bottom menu-right">
+					<div class="container-fluid pl-30 pr-30">
+						<div class="row align-items-center"><!--Logo start-->
+							<div class="col-xl-2 col-12 text-center mt-20 mb-20">
+								<div><a href="index"><img src="static/image/logo.png" class="logo" alt=""></a>
+								</div>
+							</div><!--Logo end--><!--Menu start-->
+							<div class="col-xl-4 col-12">
+								<nav class="main-menu">
+									<ul>
+										<li><a href="index">Home </a>
+										</li>
+										<li><a href="shop-list">Shop <span class="lnr lnr-chevron-down"></span></a>
+											<ul class="mega-menu four-column">
+
+											</ul>
+										</li>
+										<li><a href="blog">Blog</a></li>
+										<li><a href="contact">Contact</a></li>
+									</ul>
+								</nav>
+							</div><!--Menu end--><!-- Cart & Search Area Start -->
+							<div class="col-xl-6 col-12 d-flex justify-content-xl-end justify-content-center">
+								<div class="header-search-area">
+									<div class="header-search-form">
+										<form action="#"><button><span class="lnr lnr-magnifier"></span></button><input
+												type="text" placeholder="Search Product..." id="livesearch1"
+												onblur="fnSearch(1)"></form>
+									</div>
+								</div>
+								<nav class="main-menu  d-flex align-items-center">
+									<ul>
+										<li><a href="#" style="padding: 0  10px;">English <span
+													class="lnr lnr-chevron-down"></span></a>
+											<ul class="sub-menu">
+												<li><a>English</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+
+								<nav class="main-menu  d-flex align-items-center">
+									<ul>
+										<li><a href="#" style="padding: 0  10px;">USD <span
+													class="lnr lnr-chevron-down"></span></a>
+											<ul class="sub-menu">
+												<li><a>USD</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+								<div class="header-cart"><a href="cart"><span class="lnr lnr-cart"></span><span
+											class="count  cart-num"></span></a><!--Mini Cart Dropdown Start-->
+									<div class="header-cart-dropdown">
+										<ul class="cart-items " id="right_product_list">
+
+
+
+										</ul>
+										<div class="cart-total">
+											<h5>Total : $<span class="float-right  total-amount-goods">0.00</span></h5>
+										</div>
+										<div class="cart-btn"><a id="cart-view">View Cart</a>
+																					<a id="checkout-view">checkout</a>
+																				</div>
+									</div><!--Mini Cart Dropdown End-->
+								</div>
+								<ul class="ht-us-menu">
+									<li><a href="#"><span class="lnr lnr-menu-circle"></span></a>
+										<ul class="ht-dropdown right">
+											<li class="AccountEditAccount"><a href="./edit-account?id=1">Orders</a>
+											</li>
+											<li class="AccountEditAccount"><a href="./edit-account?id=2">Account
+													Details</a></li>
+											<li class="AccountEditAccount"><a
+													href="./edit-account?id=3">Address</a></li>
+											<li class="AccountLogin"><a href="./login">Login</a></li>
+											<li class="AccountLogOut" onclick="fnLogout()"> <a>Log Out</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div><!-- Cart & Search Area End -->
+						</div><!--Mobile Menu start-->
+						<div class="row">
+							<div class="col-12 d-flex d-lg-none">
+								<div class="mobile-menu"></div>
+							</div>
+						</div><!--Mobile Menu end-->
+					</div>
+				</div>
+			</header><!--Header section end--><!--Header Mobile section start-->
+			<header class="header-mobile d-block d-lg-none">
+				<div class="header-bottom menu-right">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="header-mobile-navigation d-block d-lg-none">
+									<div class="row align-items-center">
+										<div class="col-6 col-md-6">
+											<div class="header-logo"><a href="index"><img
+														src="static/image/logo.png" class="img-fluid  logo" alt=""></a>
+											</div>
+										</div>
+										<div class="col-6 col-md-6">
+											<div class="mobile-navigation text-right">
+												<div class="header-icon-wrapper">
+													<ul class="icon-list justify-content-end">
+														<li>
+															<div class="header-cart-icon"><a href="cart"><i
+																		class="lnr lnr-cart  "></i><span
+																		class="cart-num">0</span></a>
+															</div>
+														</li>
+														<li><a href="javascript:void(0)" class="mobile-menu-icon"
+																id="mobile-menu-trigger"><i
+																	class="lnr lnr-menu"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!--Mobile Menu start-->
+						<div class="row">
+							<div class="col-12 d-flex d-lg-none">
+								<div class="mobile-menu"></div>
+							</div>
+						</div><!--Mobile Menu end-->
+					</div>
+				</div>
+			</header><!--Header Mobile section end--><!-- Offcanvas Menu Start -->
+			<div class="offcanvas-mobile-menu" id="offcanvas-mobile-menu"><a href="javascript:void(0)"
+					class="offcanvas-menu-close" id="offcanvas-menu-close-trigger"><i class="lnr lnr-cross"></i></a>
+				<div class="offcanvas-wrapper">
+					<div class="offcanvas-inner-content">
+						<div class="offcanvas-mobile-search-area">
+							<form action="#"><input type="search" id="livesearch2" onblur="fnSearch(2)"
+									placeholder="Search ..."><button type="submit"><i
+										class="lnr lnr-magnifier"></i></button></form>
+						</div>
+						<nav class="offcanvas-navigation">
+							<ul>
+								<li class="menu-item-has-children"><a href="#">Home</a>
+								</li>
+								<li class="menu-item-has-children"><a href="#">Shop</a>
+									<ul class="submenu2" id="mobile-shop-menu">
+
+									</ul>
+								</li>
+								<li class="menu-item-has-children  angle-shape-pages"><a href="#">Pages</a>
+									<ul class="submenu2">
+										<li class="AccountEditAccount"><a href="./edit-account?id=1">Orders</a>
+										</li>
+										<li class="AccountEditAccount"><a href="./edit-account?id=2">Account
+												Details</a></li>
+										<li class="AccountEditAccount"><a href="./edit-account?id=3">Address</a>
+										</li>
+										<li class="AccountLogin"><a href="./login">Login</a></li>
+										<li class="AccountLogOut" onclick="fnLogout()"> <a>Log Out</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children"><a href="blog">Blog</a></li>
+								<li class="menu-item-has-children"><a href="contact">Contact Us</a></li>
+							</ul>
+						</nav>
+						<div class="offcanvas-settings">
+							<nav class="offcanvas-navigation">
+								<ul>
+									<li class="menu-item-has-children"><a href="#">CURRENCY: USD</a>
+										<ul class="submenu2">
+											<li><a href="javascript:void(0)">EUR Euro</a></li>
+											<li><a href="javascript:void(0)">$ US Dollar</a></li>
+										</ul>
+									</li>
+									<li class="menu-item-has-children"><a href="#">LANGUAGE: EN-GB</a>
+										<ul class="submenu2">
+											<li><a href="javascript:void(0)"><img src="static/picture/en-gb.png"
+														alt="">English</a></li>
+											<li><a href="javascript:void(0)"><img src="static/picture/de-de.png"
+														alt="">Germany</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="offcanvas-widget-area">
+						</div>
+					</div>
+				</div>
+			</div><!-- Offcanvas Menu End --><!-- Page Banner Section Start -->
+
+			<div class="hero-section section position-relative">
+				<div class="hero-slider section"><!--Hero Item start-->
+					<div class="hero-item bg-image" data-bg="static/picture/hero-1.jpg">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-7"><!--Hero Content start-->
+									<div class="hero-content-2 center" id="random_classify_1">
+										<h1>Durable for Greater Peace of Mind</h1>
+										<h5>Don't Miss Out for Another Year!</h5>
+									</div><!--Hero Content end-->
+								</div>
+							</div>
+						</div>
+					</div><!--Hero Item end--><!--Hero Item start-->
+					<div class="hero-item bg-image" data-bg="static/picture/hero-2.jpg">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-7"><!--Hero Content start-->
+									<div class="hero-content-2 center" id="random_classify_2">
+										<h1>Limited Time Offer</h1>
+										<h5>New Collection Flat 30% Off Only This Month</h5>
+
+									</div><!--Hero Content end-->
+								</div>
+							</div>
+						</div>
+					</div><!--Hero Item end--><!--Hero Item start-->
+					<div class="hero-item bg-image" data-bg="static/picture/hero-3.jpg">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-7"><!--Hero Content start-->
+									<div class="hero-content-2 center" id="random_classify_3">
+										<h1>New product launch</h1>
+										<h5>leading the trend and fashion</h5>
+									</div><!--Hero Content end-->
+								</div>
+							</div>
+						</div>
+					</div><!--Hero Item end-->
+				</div>
+			</div><!--slider section end--><!--Categories section start-->
+			<div
+				class="categories-section section bg_color--3 pt-70 pt-lg-50 pt-md-40 pt-sm-30 pt-xs-20 pb-95 pb-lg-75 pb-md-70 pb-sm-60 pb-xs-50">
+				<div class="container">
+					<div class="row"><!-- Categories Action Start -->
+						<div class="col-xl-2 col-md-4 col-sm-6 mt-30">
+							<div class="categories-action">
+								<h4 class="title">Top Categories <br>This Week</h4>
+								<p>Aliquam eget consectetuer habitasse.</p><a href="#" class="ht-btn mt-40">All
+									Categories</a>
+							</div>
+						</div><!-- Categories Action End --><!-- Single Categories Item Start -->
+						<div class="col-xl-2 col-md-4 col-sm-6 mt-30">
+							<div class="single-categories-item">
+								<div class="cate-icon"><img src="static/picture/cat1.jpg" alt=""></div>
+								<div class="cate-content random_categories_1"></div>
+							</div>
+						</div><!-- Single Categories Item Start --><!-- Single Categories Item Start -->
+						<div class="col-xl-2 col-md-4 col-sm-6 mt-30">
+							<div class="single-categories-item">
+								<div class="cate-icon"><img src="static/picture/cat2.jpg" alt=""></div>
+								<div class="cate-content random_categories_2"></div>
+							</div>
+						</div><!-- Single Categories Item Start --><!-- Single Categories Item Start -->
+						<div class="col-xl-2 col-md-4 col-sm-6 mt-30">
+							<div class="single-categories-item">
+								<div class="cate-icon"><img src="static/picture/cat3.jpg" alt=""></div>
+								<div class="cate-content random_categories_3"></div>
+							</div>
+						</div><!-- Single Categories Item Start --><!-- Single Categories Item Start -->
+						<div class="col-xl-2 col-md-4 col-sm-6 mt-30">
+							<div class="single-categories-item">
+								<div class="cate-icon"><img src="static/picture/cat4.jpg" alt=""></div>
+								<div class="cate-content random_categories_4"></div>
+							</div>
+						</div><!-- Single Categories Item Start --><!-- Single Categories Item Start -->
+						<div class="col-xl-2 col-md-4 col-sm-6 mt-30">
+							<div class="single-categories-item">
+								<div class="cate-icon"><img src="static/picture/cat5.jpg" alt=""></div>
+								<div class="cate-content random_categories_5"></div>
+							</div>
+						</div><!-- Single Categories Item Start -->
+					</div>
+				</div>
+			</div><!--Categories section end--><!--Product section start-->
+			<div
+				class="product-section section pt-75 pt-lg-55 pt-md-45 pt-sm-35 pt-xs-20 pb-55 pb-lg-35 pb-md-25 pb-sm-15 pb-xs-5">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-title text-center mb-30 pt-20">
+								<h1>OUR TOP Products</h1>
+								<p>One-stop Hardware & Kitchen Superstore</p>
+							</div><!-- Product Tab Menu Start -->
+							<div class="product-tab-menu">
+								<ul class="nav justify-content-center">
+									<li><a data-toggle="tab" class="active show" href="#recent">Sales chart</a></li>
+									<li><a data-toggle="tab" href="#toprated" class="">Top Rated</a></li>
+									<li><a data-toggle="tab" href="#browse" class="">browse</a></li>
+								</ul>
+							</div><!-- Product Tab Menu Start -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="tab-content">
+								<div id="recent" class="tab-pane fade show active">
+									<div class="row product-slider" id="response-product_2">
+
+
+
+									</div>
+								</div>
+								<div id="toprated" class="tab-pane fade">
+									<div class="row product-slider" id="response-product_4">
+
+
+									</div>
+								</div>
+								<div id="browse" class="tab-pane fade">
+									<div class="row product-slider" id="response-product_6">
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div><!--Product section end--><!-- Offer Banner Area Start -->
+			<!-- Offer Banner Area End --><!--Product section start-->
+			<div class="product-section section pt-75 pt-lg-55 pt-md-45 pt-sm-35 pt-xs-20">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-title text-center mb-40 pt-20">
+								<h1>Discounted products</h1>
+								<p>Innovative Hardware, Culinary Aids, Crafting Your Perfect Kitchen</p>
+							</div>
+						</div>
+					</div>
+					<div class="row product-slider-two">
+						<div class="col-lg-12"><!--  Single Grid product Start -->
+							<div class="single-grid-product mb-40">
+								<div class="product-image"> <a href="single-product"><img
+											src="static/picture/product-1.jpg" class="img-fluid" alt=""></a>
+								</div>
+							</div>
+							<div class="product-content">
+								<h3 class="title"><a href="single-product">Sit voluptatem rhoncus</a></h3>
+								<div class="product-category-rating">
+									<p class="product-price"><span class="discounted-price">$30.00</span></p><span
+										class="rating"><span class="lnr lnr-star"></span><span
+											class="lnr lnr-star"></span><span class="lnr lnr-star"></span><span
+											class="lnr lnr-star"></span><span class="lnr lnr-star"></span></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12"><!--  Single Grid product Start -->
+							<div class="single-grid-product mb-40">
+								<div class="product-image"> <a href="single-product"><img
+											src="static/picture/product-1.jpg" class="img-fluid" alt=""></a>
+								</div>
+							</div>
+							<div class="product-content">
+								<h3 class="title"><a href="single-product">Sit voluptatem rhoncus</a></h3>
+								<div class="product-category-rating">
+									<p class="product-price"><span class="discounted-price">$30.00</span></p><span
+										class="rating"><span class="lnr lnr-star"></span><span
+											class="lnr lnr-star"></span><span class="lnr lnr-star"></span><span
+											class="lnr lnr-star"></span><span class="lnr lnr-star"></span></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12"><!--  Single Grid product Start -->
+							<div class="single-grid-product mb-40">
+								<div class="product-image"> <a href="single-product"><img
+											src="static/picture/product-1.jpg" class="img-fluid" alt=""></a>
+								</div>
+							</div>
+							<div class="product-content">
+								<h3 class="title"><a href="single-product">Sit voluptatem rhoncus</a></h3>
+								<div class="product-category-rating">
+									<p class="product-price"><span class="discounted-price">$30.00</span></p><span
+										class="rating"><span class="lnr lnr-star"></span><span
+											class="lnr lnr-star"></span><span class="lnr lnr-star"></span><span
+											class="lnr lnr-star"></span><span class="lnr lnr-star"></span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--Product section end--><!--Blog section start-->
+
+		<div class="instagram-area section">
+			<div class="instagram-block-4 fix">
+				<ul id="Instafeed"></ul>
+			</div>
+		</div>
+		<div id="foot">
+
+		</div>
+		</div>
+		<script>
+			if (window.location.href.indexOf("details") > 0 || window.location.href.indexOf("orders") > 0 || window.location.href
+					.indexOf("orders") > 0 || window.location.href.indexOf("dashboard") > 0) {
+				window.location.href = "../shop-list";
+			}
+		</script>
+		<script>
+
+		</script>
+		<!-- Placed js at the end of the document so the pages load faster --><!-- All jquery file included here -->
+		<script src="static/js/jquery-1.12.4.min.js"></script>
+		<script src="static/js/popper.min.js"></script>
+		<script src="static/js/bootstrap.min.js"></script>
+		<script src="static/js/plugins.js"></script>
+		<script src="static/js/main.js"></script>
+
+
+		<script src="static/js/jquery.toast.js"></script>
+		<script src="static/ajaxJs/js/index.js" type="module"></script>
+		<script src="static/ajaxJs/js/head.js" type="module"></script>
+		<script src="static/ajaxJs/js/cart.js" type="module"></script>
+
+	</body>
+</html>
